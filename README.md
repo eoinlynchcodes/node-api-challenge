@@ -40,13 +40,26 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+Express provides routing for URL endpoints and runs different API calls depending on the routing. 
+
+Express has middleware.
+
 - [ ] Describe Middleware?
+
+Middleware are functions that help us write better code and reduce errors in data handling. Examples of middlewares include logging information as requests run and data validation. 
 
 - [ ] Describe a Resource?
 
+Resource in this case refers to data passed liks images, css, JavaScript of other static files.  
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+status 200
+
 - [ ] How can we partition our application into sub-applications?
+
+We can have files with all the possible end points or CRUD operations of a route. 
+
 
 ## Minimum Viable Product
 
