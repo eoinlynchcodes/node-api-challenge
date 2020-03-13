@@ -27,8 +27,16 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/:id/projects', (req, res) => {
-// need to configure what gets passed in.
-
+    const id = req.params.id++;
+    const project = req.body;
+    project.project_id = id; 
+    projectsHelpers.insert(project)
+    .then(response => {
+        res.status(201).json(response)
+    })
+    .catch(error => {
+        res.status(500).json(error)
+    });
 });
 
 router.put('/:id', (req, res) => {
