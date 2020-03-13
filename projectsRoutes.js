@@ -26,6 +26,32 @@ router.get('/:id', (req, res) => {
     });
 });
 
+router.post('/:id/projects', (req, res) => {
+// need to configure what gets passed in.
+
+});
+
+router.put('/:id', (req, res) => {
+    const id = req.params.id;
+    projectsHelpers.update(id, req.body)
+    .then(response => {
+        res.status(202).json(response);
+    })
+    .catch(error => {
+        res.status(500).json(error);
+    });
+});
+
+router.delete('/:id', (req, res) => {
+    const id = req.params.id;
+    projectsHelpers.remove(id)
+    .then(response => {
+        res.status(200).json(response)
+    })
+    .catch(error => {
+        res.status(500).json(error);
+    })
+})
 
 
 
